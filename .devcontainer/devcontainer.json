@@ -1,0 +1,16 @@
+{
+    "build": {
+        "context": "..",
+        "dockerfile": "Dockerfile"
+    },
+
+    "postCreateCommand": "scripts/setup",
+
+    "remoteUser": "vscode",
+    "sshAuthSock": "/tmp/ssh-agent.sock",
+
+    "containerEnv": {
+        "KUBECONFIG": "/workspaces/homelab/.kube/config",
+        "SSH_AUTH_SOCK": "/tmp/ssh-agent.sock" 
+    }
+}
